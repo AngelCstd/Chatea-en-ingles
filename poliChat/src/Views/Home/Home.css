@@ -12,5 +12,25 @@
     width: calc(100% - 32px);
     min-height: 50vh;
     max-height: fit-content;
-    background-color: aqua;
+    background-color: #EBFEF6;
+    border-radius: 25px;
 }
+/*01C981 Fondo h3
+A0FAD6 Borde H3
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); H3
+border-radius: 7px
+height 80px
+
+linea izquierda
+border-radius: 35px 0px 0px 33px;
+background: #008262;
+width: 4px;
+faltante de componente
+border-radius: 0px 13px 13px 0px;
+border: 1px solid rgba(0, 0, 0, 0.40);
+border-let: none
+background: #F7F7F7;
+#F7F7F7 fondo
+#1E1E1E letras
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+*/
