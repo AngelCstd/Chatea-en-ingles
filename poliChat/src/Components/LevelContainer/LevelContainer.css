@@ -1,0 +1,12 @@
+.levelContainer__article{
+    padding: 8px 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.31);
+}
+.levelContainer__container{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+}
+.levelContainer__title{
+    margin-bottom: 8px;
+}

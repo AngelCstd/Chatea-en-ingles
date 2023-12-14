@@ -1,0 +1,16 @@
+.home__section{
+    min-height: calc(100vh - 56px);
+    position: relative;
+}
+.home__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 32px);
+    min-height: 50vh;
+    max-height: fit-content;
+    background-color: aqua;
+}
