@@ -1,0 +1,31 @@
+.subtopic__container{
+    display: block;
+    border: 1px solid black;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.40);
+    border-left: none;
+    width: calc(100% - 18px);
+    background: #F7F7F7;
+    position: relative;
+    padding: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+    background-color: #F7F7F7;
+}
+.subtopic__container::after{
+    content: "";
+    display: block;
+    width: 4px;
+    height: calc(100% + 1.5px);
+    background: #008262;
+    position: absolute;
+    right: 100%;
+    top: -.5px;
+    border-radius: 4px 0 0 4px;
+}
+.subtopic__container a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}

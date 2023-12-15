@@ -1,6 +1,6 @@
 import "./Home.css"
 import { LevelContainer } from "../../Components/LevelContainer";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Subtopic } from "../../Components/Subtopic";
 
 let json = [
@@ -147,13 +147,30 @@ export function Home() {
     let [subtopics, setSubtopics] = useState([])
     let [topicTitle, setTopicTitle] = useState("")
     let [showSubtopics, setShowSubtopics] = useState(false)
+    let refModal = useRef();
 
-    const handleSetShowModal=(levelChild)=>{
+    const handleSetShowModal = (levelChild) => {
         let [title, subtopics] = levelChild
         setSubtopics(subtopics)
         setTopicTitle(title)
         setShowSubtopics(true)
     }
+
+    const handleHiddenModal = (e)=>{
+        if(e.target == refModal.current){
+            setShowSubtopics(false)
+        }
+        
+    }
+
+    useEffect(()=>{
+        if (showSubtopics) {
+            document.addEventListener("click",handleHiddenModal)
+        }
+        return ()=>{
+            document.removeEventListener("click",handleHiddenModal)
+        }
+    },[showSubtopics])
 
     return (
         <section className="home__section">
@@ -161,16 +178,18 @@ export function Home() {
                 let [title, topics] = Object.entries(level)[0]
                 return <LevelContainer key={title + id} topicsObject={topics} title={title} setShowModal={handleSetShowModal} />
             })}
-            {showSubtopics ? 
-            (<article className="home__modal">
-                <h3>{topicTitle}</h3>
-                <div className="modal__subtopics">
-                    {subtopics.map((current, id)=>{
-                        return <Subtopic key={current+id} title={current} />
-                    })}
-                </div>
-            </article>)
-            :<></>}
+            {showSubtopics ?
+                (<div  ref={refModal} className="home__modal--background">
+                    <div className="home__modal">
+                        <h3>{topicTitle}</h3>
+                        <ul className="modal__subtopics">
+                            {subtopics.map((current, id) => {
+                                return <Subtopic key={current + id} title={current} />
+                            })}
+                        </ul>
+                    </div>
+                </div>)
+                : <></>}
         </section>
     )
 }

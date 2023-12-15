@@ -5,8 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function BarNav() {
     let [showNav, setShowNav] = useState(false);
-    let refMenu = useRef(),
-        refIconMenu = useRef();
+    let refMenu = useRef();
 
     function handleShowNav() {
         setShowNav(!showNav)
@@ -14,7 +13,7 @@ export function BarNav() {
     }
 
     function handleClickOutside(e){
-        if(showNav &&  !refMenu.current.contains(e.target)&& !refIconMenu.current.contains(e.target)){
+        if(refMenu.current==e.target){
             setShowNav(false)
         }
     }
@@ -45,7 +44,7 @@ export function BarNav() {
                     <li className="nav__item"><a href="/"><IconVocabulary/><span>Vocabulary</span></a></li>
                 </ul>
             </nav>
-            <div ref={refIconMenu} className="nav__icon" onClick={handleShowNav} ><IconMenu /></div>
+            <div className="nav__icon" onClick={handleShowNav} ><IconMenu /></div>
             
         </header>
     )

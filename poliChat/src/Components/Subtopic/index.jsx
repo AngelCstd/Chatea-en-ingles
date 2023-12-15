@@ -2,8 +2,8 @@ import "./Subtopic.css"
 
 export function Subtopic(props) {
     return(
-        <span>
+        <li className="subtopic__container">
             <a href="/">{props.title}</a>
-        </span>
+        </li>
     )
 }
