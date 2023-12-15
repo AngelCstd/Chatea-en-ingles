@@ -7,7 +7,8 @@ function App() {
   return (
     <>
       <BarNav/>
-      <Home/>
+      {/*<Home/>*/}
+      
     </>
   )
 }
