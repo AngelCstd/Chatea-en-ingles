@@ -1,7 +1,7 @@
 .chat__section{
     padding-top: 56px;
     position: relative;
-    height: calc(100vh - 56px);
+    height: calc(100dvh - 56px);
     background-color: aqua;
 }
 .chat__inputcontainer{
@@ -12,18 +12,19 @@
 }
 .chat__inputcontainer input{
     border: 1px solid #A0FAD6;
-    border-radius: 30px;
+    border-radius: 40px;
     padding: 8px;
     width: calc(100% - 33px);
-    height: 33px;
+    height: 13vw;
+    font-size: 18px;
 }
 .chat__inputcontainer button{
     border-radius: 50%;
     border: none;
     background-color: #01C981;
     color: #FFF;
-    width: 33px;
-    height: 33px;
+    width: 13vw;
+    height: 13vw;
     display: flex;
     justify-content: center;
     align-items: center;
