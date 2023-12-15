@@ -1,0 +1,30 @@
+.chat__section{
+    padding-top: 56px;
+    position: relative;
+    height: calc(100vh - 56px);
+    background-color: aqua;
+}
+.chat__inputcontainer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+}
+.chat__inputcontainer input{
+    border: 1px solid #A0FAD6;
+    border-radius: 30px;
+    padding: 8px;
+    width: calc(100% - 33px);
+    height: 33px;
+}
+.chat__inputcontainer button{
+    border-radius: 50%;
+    border: none;
+    background-color: #01C981;
+    color: #FFF;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

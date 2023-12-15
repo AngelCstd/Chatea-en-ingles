@@ -1,5 +1,6 @@
 import { BarNav } from "./Components/BarNav";
 import { Home } from "./Views/Home";
+import { Chat } from "./Views/Chat";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <>
       <BarNav/>
       {/*<Home/>*/}
-      
+      <Chat/>
     </>
   )
 }
