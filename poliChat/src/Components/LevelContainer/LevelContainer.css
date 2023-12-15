@@ -6,6 +6,7 @@
     display: flex;
     gap: 16px;
     overflow-x: auto;
+    padding-bottom: 8px;
 }
 .levelContainer__title{
     margin-bottom: 8px;

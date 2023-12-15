@@ -16,8 +16,7 @@
     width: 100%;
     transform: translateX(100vw);
     transition: 
-    transform 300ms ease-out,
-    background-color .5s ease-out;
+    transform 350ms ease-out;
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
@@ -30,6 +29,9 @@
     flex-direction: column;
 }
 .nav__nav--show{
+    transition: 
+    transform 350ms ease-out,
+    background-color 500ms ease-out 300ms;
     transform: translateX(0vw);
     background-color: rgba(0, 0, 0, 0.425);
 }
