@@ -13,13 +13,13 @@ export function BarNav() {
 
     function handleClickOutside(e){
         if(refMenu.current==e.target){
+            refMenu.current.classList.toggle("nav__nav--show")
             setShowNav(false)
         }
     }
     useEffect(()=>{
-        /*VERIFICAR SI TIENE LA CLASE Y SI LA TIENE PODER QUITARSELA*/
-        refMenu.current.classList.toggle("nav__nav--show")
         if(showNav){
+            refMenu.current.classList.toggle("nav__nav--show")
             document.addEventListener("click",handleClickOutside)
         }
         return () =>{
@@ -29,7 +29,7 @@ export function BarNav() {
 
     return (
         <header className="nav__header">
-            <nav ref={refMenu} className="nav__nav nav__nav--show">
+            <nav ref={refMenu} className="nav__nav">
                 <ul className="nav__list">
                     <li className="nav__item nav__item--perfil">
                         <div className="imagen"></div>
