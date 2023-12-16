@@ -1,0 +1,12 @@
+.message{
+    list-style-type: none;
+    width: fit-content;
+    max-width: 90%;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 12px;
+}
+.message__user{
+    align-self: flex-end;
+    background-color: #D2F9E4;
+}
