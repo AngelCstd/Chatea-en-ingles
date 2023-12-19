@@ -1,6 +1,7 @@
 import "./BarNav.css";
 import { IconMenu, IconHome, IconHistory, IconChange, IconVocabulary} from "../../assets/Icon";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export function BarNav() {
@@ -35,13 +36,13 @@ export function BarNav() {
                         <div className="imagen"></div>
                         <div>
                             <h1>Angel Castañeda</h1>
-                            <a>Ver perfil</a>
+                            <Link to="/perfil">Ver perfil</Link>
                         </div>
                     </li>
-                    <li className="nav__item"><a href="/"><IconHome/><span>Home</span></a></li>
-                    <li className="nav__item"><a href="/"><IconHistory/><span>History</span></a></li>
-                    <li className="nav__item"><a href="/"><IconChange/><span>Change conversation</span></a></li>
-                    <li className="nav__item"><a href="/"><IconVocabulary/><span>Vocabulary</span></a></li>
+                    <li className="nav__item"><Link to="/"><IconHome/><span>Home</span></Link></li>
+                    <li className="nav__item"><Link to="/history"><IconHistory/><span>History</span></Link></li>
+                    <li className="nav__item"><Link to="/"><IconChange/><span>Change conversation</span></Link></li>
+                    <li className="nav__item"><Link to="/vocabulary "><IconVocabulary/><span>Vocabulary</span></Link></li>
                 </ul>
             </nav>
             <div className="nav__icon" onClick={handleShowNav} ><IconMenu /></div>
