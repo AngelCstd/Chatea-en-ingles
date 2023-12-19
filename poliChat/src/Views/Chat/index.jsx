@@ -39,7 +39,7 @@ export function Chat() {
                 </article>
                 <ul className="chat__container">
                     {messages.map(({from, id, message}) => {
-                        return <Message key={id} message={message} />
+                        return <Message key={id} message={message} from={from} />
                     })}
                 </ul>
             </div>
