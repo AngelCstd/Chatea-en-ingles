@@ -1,6 +1,7 @@
 import { BarNav } from "./Components/BarNav";
 import { Home } from "./Views/Home";
 import { Chat } from "./Views/Chat";
+import { ErrorView } from "./Views/ErrorView";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -12,7 +13,8 @@ function App() {
         <BarNav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/chat/:topic" element={<Chat />} />
+          <Route path="*" element={<ErrorView />} />
         </Routes>
       </BrowserRouter>
     </>
